@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>benri-na-pdf — スキャンPDF向け軽量エディタ</title>
+  <meta name="description" content="benri-na-pdf — 二値化・傾き補正・OCR・結合などをまとめた、スキャンPDF向け軽量 PDF エディタ。">
+  <link rel="icon" href="./assets/img/icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="./assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="./" class="navbar-brand d-flex align-items-center">
+        <img src="./assets/img/icon.png" alt="" width="22" height="22" class="me-2">
+        <strong>benri-na-pdf</strong>
+      </a>
+      <div>
+        <a href="./manual.html" class="text-light text-decoration-none small me-3">
+          <i class="bi bi-book me-1"></i>マニュアル
+        </a>
+        <a href="https://github.com/informanellica/benri-na-pdf/releases" class="text-light text-decoration-none small me-3">
+          <i class="bi bi-clock-history me-1"></i>更新履歴
+        </a>
+        <a href="https://github.com/informanellica/benri-na-pdf" class="text-light text-decoration-none small">
+          <i class="bi bi-github me-1"></i>GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="py-5 bg-body-tertiary border-bottom">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="d-flex align-items-center mb-3">
+          <img src="./assets/img/icon.png" alt="" width="56" height="56" class="me-3">
+          <div>
+            <h1 class="mb-0">benri-na-pdf</h1>
+            <p class="text-body-secondary mb-0">
+              スキャンPDF向け軽量エディタ
+              <span class="badge text-bg-secondary ms-1">v0.1.3</span>
+            </p>
+          </div>
+        </div>
+        <p class="lead">
+          スキャンした PDF を画面上で編集することに最適化した、Electron ベースの軽量 PDF エディタ。
+          二値化・傾き補正・OCR・ページ並べ替え・結合・注釈・圧縮保存を 1 アプリで完結できます。
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="https://github.com/informanellica/benri-na-pdf/releases/latest"
+             class="btn btn-primary btn-lg">
+            <i class="bi bi-download me-1"></i>最新版ダウンロード
+          </a>
+          <a href="./manual.html" class="btn btn-outline-secondary btn-lg">
+            <i class="bi bi-book me-1"></i>マニュアル
+          </a>
+        </div>
+        <p class="text-body-secondary small mt-2 mb-0">
+          <i class="bi bi-windows me-1"></i>Windows 11 (64-bit)
+          ・無料・フリーソフト
+        </p>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <img src="./assets/img/screenshot-main.png" class="img-fluid rounded shadow" alt="メイン画面">
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container py-5 doc-body">
+
+  <h2>主な機能</h2>
+  <div class="row g-3 mt-3">
+    <div class="col-md-6">
+      <div class="d-flex">
+        <i class="bi bi-circle-half fs-3 text-warning me-3"></i>
+        <div>
+          <h5 class="mb-1">二値化・傾き補正</h5>
+          <p class="text-body-secondary mb-0 small">
+            スキャンした書類をワンクリックで白黒に変換、傾きの自動補正も可能。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex">
+        <i class="bi bi-translate fs-3 text-success me-3"></i>
+        <div>
+          <h5 class="mb-1">OCR (日本語・英語)</h5>
+          <p class="text-body-secondary mb-0 small">
+            文字認識結果を PDF にテキストレイヤとして埋め込めます。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex">
+        <i class="bi bi-file-earmark-text fs-3 text-primary me-3"></i>
+        <div>
+          <h5 class="mb-1">ページ操作</h5>
+          <p class="text-body-secondary mb-0 small">
+            回転・削除・並べ替え (D&D)・コピー&ペースト・サムネイル右クリックメニューで素早く整理。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex">
+        <i class="bi bi-union fs-3 text-info me-3"></i>
+        <div>
+          <h5 class="mb-1">結合・圧縮保存</h5>
+          <p class="text-body-secondary mb-0 small">
+            複数 PDF・画像を 1 ファイルに。解像度 (DPI) と JPEG 品質を指定した圧縮保存でメール添付サイズに調整。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex">
+        <i class="bi bi-pencil-square fs-3 text-danger me-3"></i>
+        <div>
+          <h5 class="mb-1">編集ツール</h5>
+          <p class="text-body-secondary mb-0 small">
+            テキストボックス・フリーハンド描画・ハイライト・コメント・消しゴム。注釈は保存時に PDF に焼き込み。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex">
+        <i class="bi bi-stars fs-3 text-warning me-3"></i>
+        <div>
+          <h5 class="mb-1">AI 要約 (オプション)</h5>
+          <p class="text-body-secondary mb-0 small">
+            Ollama (ローカル) / OpenAI / Anthropic / Gemini / Mistral から選択可能。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>スクリーンショット</h2>
+  <div class="row g-3 mt-2">
+    <div class="col-md-6">
+      <img src="./assets/img/screenshot-main.png" alt="メイン画面">
+      <p class="small text-center text-body-secondary">メイン画面 (単ページ表示)</p>
+    </div>
+    <div class="col-md-6">
+      <img src="./assets/img/screenshot-spread.png" alt="見開き表示">
+      <p class="small text-center text-body-secondary">見開き表示</p>
+    </div>
+    <div class="col-md-6">
+      <img src="./assets/img/screenshot-binarize-before.png" alt="二値化前">
+      <p class="small text-center text-body-secondary">二値化前 (古書スキャン例)</p>
+    </div>
+    <div class="col-md-6">
+      <img src="./assets/img/screenshot-binarize-after.png" alt="二値化後">
+      <p class="small text-center text-body-secondary">二値化後</p>
+    </div>
+  </div>
+
+  <h2>動作環境</h2>
+  <ul>
+    <li><strong>Windows 11</strong> (64-bit)</li>
+    <li>インストーラ約 195MB、必要 RAM 約 4GB 以上を推奨</li>
+    <li>インターネット接続は必須ではありません (オンライン AI 要約のみネット必要)</li>
+  </ul>
+
+  <h2>インストール</h2>
+  <ol>
+    <li><a href="https://github.com/informanellica/benri-na-pdf/releases/latest">最新版リリースページ</a>から
+        <code>benri-na-pdf Setup x.y.z.exe</code> をダウンロード</li>
+    <li>ダウンロードしたインストーラを実行</li>
+    <li>スタートメニューから「benri-na-pdf」を起動</li>
+  </ol>
+
+</main>
+
+<footer class="text-body-secondary py-4 border-top mt-5">
+  <div class="container small">
+    <p class="mb-1">© Informanellica</p>
+    <p class="mb-0">
+      <a href="https://informanellica.github.io/" class="text-body-secondary">← Software Album</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

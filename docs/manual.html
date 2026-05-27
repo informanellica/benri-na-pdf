@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>マニュアル | benri-na-pdf</title>
+  <meta name="description" content="benri-na-pdf のオンラインマニュアル。">
+  <link rel="icon" href="./assets/img/icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="./assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="./" class="navbar-brand d-flex align-items-center">
+        <img src="./assets/img/icon.png" alt="" width="22" height="22" class="me-2">
+        <strong>benri-na-pdf</strong>
+      </a>
+      <div>
+        <a href="./" class="text-light text-decoration-none small me-3">
+          <i class="bi bi-house me-1"></i>トップ
+        </a>
+        <a href="https://github.com/informanellica/benri-na-pdf/releases" class="text-light text-decoration-none small me-3">
+          <i class="bi bi-clock-history me-1"></i>更新履歴
+        </a>
+        <a href="https://github.com/informanellica/benri-na-pdf" class="text-light text-decoration-none small">
+          <i class="bi bi-github me-1"></i>GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container py-5 doc-body">
+
+  <h1><i class="bi bi-book me-2"></i>マニュアル</h1>
+  <p class="lead">benri-na-pdf v0.1.3 の操作マニュアルです。</p>
+
+  <nav class="my-4 p-3 bg-body-tertiary rounded">
+    <strong>目次</strong>
+    <ul class="mb-0 mt-2">
+      <li><a href="#install">インストールと起動</a></li>
+      <li><a href="#file">ファイル操作</a></li>
+      <li><a href="#view">表示モード</a></li>
+      <li><a href="#page">ページ操作</a></li>
+      <li><a href="#edit">編集ツール</a></li>
+      <li><a href="#image">画像処理 (二値化・傾き補正)</a></li>
+      <li><a href="#ocr">OCR</a></li>
+      <li><a href="#save">保存と圧縮保存</a></li>
+      <li><a href="#summary">AI 要約</a></li>
+      <li><a href="#shortcuts">キーボードショートカット</a></li>
+      <li><a href="#settings">アプリ設定</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="install">インストールと起動</h2>
+  <ol>
+    <li><a href="https://github.com/informanellica/benri-na-pdf/releases/latest">最新版リリース</a>から <code>benri-na-pdf Setup x.y.z.exe</code> をダウンロード</li>
+    <li>インストーラを実行 (インストール先・スタートメニュー登録を選択可能)</li>
+    <li>スタートメニューから「benri-na-pdf」を起動</li>
+  </ol>
+  <p>初回起動時はチュートリアルが表示されます。後からも右上の <i class="bi bi-mortarboard"></i> ボタンで再表示できます。</p>
+
+  <h2 id="file">ファイル操作</h2>
+  <ul>
+    <li><strong>PDFを開く</strong> — ツールバー左端の <i class="bi bi-file-earmark-plus"></i> ボタン、またはウィンドウへ PDF をドラッグ&ドロップ</li>
+    <li><strong>ファイル結合</strong> — <i class="bi bi-union"></i> ボタン。複数 PDF・画像を選択 → プレビューモーダルで順序確認 → 「結合して開く」または「結合して保存」</li>
+    <li><strong>最近開いたファイル</strong> — ホーム画面に最近のファイルが並びます。クリックで再オープン</li>
+    <li><strong>関連付け</strong> — インストール後、PDF を右クリック →「プログラムから開く」で benri-na-pdf を選択できます</li>
+  </ul>
+
+  <h2 id="view">表示モード</h2>
+  <p>ツールバー中央の表示モードボタンで切替:</p>
+  <ul>
+    <li><i class="bi bi-file-earmark"></i> <strong>単ページ</strong> — 1 ページずつ表示</li>
+    <li><i class="bi bi-list"></i> <strong>連続スクロール</strong> — 全ページを縦に並べてスクロール</li>
+    <li><i class="bi bi-arrows-fullscreen"></i> <strong>フィット</strong> — ウィンドウサイズに合わせて表示</li>
+    <li><i class="bi bi-book"></i> <strong>見開き</strong> — 2 ページ並べて表示。右開き(縦書き)/左開き(横書き)を切替可能</li>
+  </ul>
+
+  <h2 id="page">ページ操作</h2>
+  <ul>
+    <li><strong>ページ移動</strong> — ページ番号入力欄、または ←/→ キー、マウスホイール (単ページ時)</li>
+    <li><strong>サイドバーサムネイル</strong> — クリックで該当ページにジャンプ、ドラッグ&ドロップで並べ替え</li>
+    <li><strong>サムネイル右クリックメニュー</strong> — 削除・コピー・切り取り・貼り付け・回転・二値化・傾き補正などを直接実行</li>
+    <li><strong>複数選択</strong> — <kbd>Ctrl</kbd>+クリックでトグル、<kbd>Shift</kbd>+クリックで範囲選択、<kbd>Ctrl</kbd>+<kbd>A</kbd> で全選択</li>
+    <li><strong>回転</strong> — ツールバーの <i class="bi bi-arrow-counterclockwise"></i> / <i class="bi bi-arrow-clockwise"></i> で 90 度ずつ回転</li>
+    <li><strong>削除</strong> — <kbd>Delete</kbd> キーまたは <i class="bi bi-trash"></i> ボタン</li>
+    <li><strong>コピー&貼り付け</strong> — <kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd></li>
+  </ul>
+
+  <h2 id="edit">編集ツール</h2>
+  <ul>
+    <li><strong>テキスト</strong> <i class="bi bi-fonts"></i> — クリックでテキストボックスを追加、ドラッグで移動、ダブルクリックで編集</li>
+    <li><strong>描画</strong> <i class="bi bi-pencil"></i> — フリーハンドで線を描画。色・太さを調整可</li>
+    <li><strong>ハイライト</strong> <i class="bi bi-highlighter"></i> — 範囲をドラッグして黄色いマーキング</li>
+    <li><strong>消しゴム</strong> <i class="bi bi-eraser"></i> — 描画やハイライトを消去</li>
+    <li><strong>コメント</strong> <i class="bi bi-chat"></i> — 付箋のような注釈をページに貼付</li>
+  </ul>
+  <p class="small text-body-secondary">編集内容は保存時に PDF へ焼き込まれます。</p>
+
+  <h2 id="image">画像処理 (二値化・傾き補正)</h2>
+  <h3>二値化</h3>
+  <ul>
+    <li><i class="bi bi-circle-half"></i> <strong>選択ページを二値化</strong> — サイドバーで複数選択していればそれら、無ければ現在ページのみ</li>
+    <li><strong>すべて二値化</strong> — 全ページを一括で二値化</li>
+  </ul>
+  <p>パラメータはツールバー右端の <i class="bi bi-sliders"></i> アプリ設定から変更できます。</p>
+  <ul>
+    <li><strong>アルゴリズム</strong> — adaptiveMean (デフォルト・高速) / adaptiveGaussian (高品質・低ノイズ) / Otsu (自動) / 単純しきい値</li>
+    <li><strong>blockSize</strong> — 局所平均の窓サイズ。21〜51 が目安。大きいほど滑らかに</li>
+    <li><strong>C</strong> — オフセット。小さくすると薄い画素が残りやすい (例: 3〜10)</li>
+    <li><strong>CLAHE 前処理</strong> — 局所コントラスト強調</li>
+    <li><strong>モルフォロジー閉じ処理</strong> — 細線の途切れを補修 (太る副作用あり)</li>
+  </ul>
+
+  <h3>傾き補正</h3>
+  <p><i class="bi bi-bounding-box"></i> ボタンで Hough 変換ベースの自動傾き検出 → 補正。スキャン文書を真っ直ぐに揃えます。</p>
+
+  <h2 id="ocr">OCR</h2>
+  <ul>
+    <li><strong>OCR (JP)</strong> <i class="bi bi-translate"></i> — 日本語文字認識</li>
+    <li><strong>OCR (EN)</strong> — 英語文字認識</li>
+  </ul>
+  <p>結果モーダルで:</p>
+  <ul>
+    <li><strong>コピー</strong> — テキストをクリップボードへ</li>
+    <li><strong>PDFに埋め込む</strong> — 透明テキストレイヤとして PDF に埋め込み (保存時に適用)。検索可能 PDF になります</li>
+  </ul>
+
+  <h2 id="save">保存と圧縮保存</h2>
+  <ul>
+    <li><strong>名前を付けて保存</strong> <i class="bi bi-download"></i> — OS の保存ダイアログで保存先を指定</li>
+    <li><strong>上書き保存</strong> <i class="bi bi-save"></i> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) — 開いていたファイルに上書き (初回は保存ダイアログ)</li>
+    <li><strong>圧縮保存</strong> <i class="bi bi-file-zip"></i> — 解像度 (DPI) と JPEG 品質を指定して再エンコード保存。メール添付サイズに調整したいときに</li>
+  </ul>
+
+  <h2 id="summary">AI 要約</h2>
+  <p>ツールバーの <i class="bi bi-stars"></i> で右サイドバーを開き、現在ページまたは全ページの要約を AI に依頼できます。プロバイダーは設定アイコンから選択:</p>
+  <ul>
+    <li><strong>Ollama (ローカル)</strong> — オフライン動作。事前に <code>ollama pull モデル名</code> でモデル取得が必要</li>
+    <li><strong>OpenAI / Anthropic / Google Gemini / Mistral</strong> — オンライン。API キー要</li>
+  </ul>
+  <p class="small text-body-secondary">API キーはブラウザのローカルストレージに保存され、外部送信は AI プロバイダーへの API リクエストのみです。</p>
+
+  <h2 id="shortcuts">キーボードショートカット</h2>
+  <table class="table table-sm">
+    <tbody>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>上書き保存</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>全ページ選択</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>選択ページをコピー</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>X</kbd></td><td>選択ページを切り取り</td></tr>
+      <tr><td><kbd>Ctrl</kbd>+<kbd>V</kbd></td><td>ページを貼り付け</td></tr>
+      <tr><td><kbd>Delete</kbd></td><td>選択ページを削除</td></tr>
+      <tr><td><kbd>F12</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd></td><td>開発者ツール開閉</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="settings">アプリ設定</h2>
+  <p>ツールバー右の <i class="bi bi-sliders"></i> ボタンから設定モーダルを開きます。設定はブラウザのローカルストレージに保存され、次回起動時にも維持されます。</p>
+  <ul>
+    <li><strong>二値化パラメータ</strong> — アルゴリズム・blockSize・C・CLAHE・モルフォロジー処理</li>
+    <li><strong>既定値に戻す</strong> — モーダル左下のボタン</li>
+  </ul>
+
+</main>
+
+<footer class="text-body-secondary py-4 border-top mt-5">
+  <div class="container small">
+    <p class="mb-1">© Informanellica</p>
+    <p class="mb-0">
+      <a href="./" class="text-body-secondary">← benri-na-pdf トップ</a>
+      ・<a href="https://informanellica.github.io/" class="text-body-secondary">Software Album</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
