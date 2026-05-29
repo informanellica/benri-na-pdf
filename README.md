@@ -25,3 +25,8 @@
 ## このリポジトリの構成
 
 - `docs/` — 公式サイトのソース (GitHub Pages から配信)
+
+## 不具合・誤植の連絡
+
+サイトの誤植、リンク切れ、アプリの不具合、機能要望などがあれば
+[Issues](https://github.com/informanellica/benri-na-pdf/issues) でお知らせください。
