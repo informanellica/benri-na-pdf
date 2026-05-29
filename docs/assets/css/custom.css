@@ -61,3 +61,42 @@
     padding: 2px 5px;
     font-size: .85em;
 }
+
+/* === 共有ボタン (waka と同型) === */
+.share-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
+    flex-wrap: wrap;
+}
+.share-label {
+    color: #6c757d;
+    font-size: .9em;
+    margin-right: .4em;
+}
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4em;
+    height: 2.4em;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform .12s, box-shadow .12s;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    user-select: none;
+}
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .18);
+}
+.share-btn svg { display: block; }
+.share-x     { background: #000;     color: #fff; }
+.share-fb    { background: #1877f2;  color: #fff; }
+.share-line  { background: #06c755;  color: #fff; }
+.share-email { background: #5d5346;  color: #fff; }
+.share-copy  { background: #6c757d;  color: #fff; }
+.share-copy.copied { background: #198754; }
